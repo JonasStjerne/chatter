@@ -7,6 +7,10 @@
     color: white;
 }
 
+p {
+    color: black;
+}
+
 body {
     min-height: 100%;
     width: 100%;
@@ -18,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 10vh;
+    margin: 0 30vh;
     gap: 20px;
 }
 
@@ -42,6 +46,7 @@ input:focus {
     background-color: white;
     border-radius: 10px;
     width: 100%;
+    min-width: 600px;
 }
 
 #messages {
@@ -49,6 +54,28 @@ input:focus {
     min-height: 400px;
 }
 
-#input {
+#inputSend {
     background-color: #EFEFEF;
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+}
+
+#sendIcon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+}
+
+#inputContainer {
+    position: relative;
+    min-width: 10px;
+}
+
+.messageBlob {
+    border-radius: 500px;
+    background-color: var(--gradient);
+    max-width: 80%;
 }
