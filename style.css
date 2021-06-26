@@ -1,0 +1,54 @@
+:root {
+    --gradient: linear-gradient(to right, #00EBA3,  #00DEE6); 
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+    color: white;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background: var(--gradient);
+}
+
+#contentDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10vh;
+    gap: 20px;
+}
+
+input {
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#room {
+    width: 50%;
+    min-width: 200px;
+}
+
+#chatDiv {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#messages {
+    width: 100%;
+    min-height: 400px;
+}
+
+#input {
+    background-color: #EFEFEF;
+}
