@@ -88,7 +88,7 @@ input:focus {
     margin-bottom: 15px;
 }
 
-.messageBlob {
+#messages > * {
     border-radius: 500px;
     background-color: var(--gradient);
     max-width: 80%;
