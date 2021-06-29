@@ -11,6 +11,10 @@ h1 {
     font-size: 3em;
 }
 
+small {
+    color: #B4B4B4;
+}
+
 label {
     color: rgb(65, 65, 65);
 }
@@ -96,12 +100,18 @@ input:focus {
     margin: 20px;
 }
 
-#messages > * {
+#messages > div {
+    width: calc(100% - 2*20px);
+    margin: 5px 0;
+}
+
+
+
+#messages > div > div {
     border-radius: 500px;
     background: var(--gradient);
     max-width: 80%;
     display: inline-block;
     color: white;
     padding: 10px;
-    margin: 10px 0;
 }

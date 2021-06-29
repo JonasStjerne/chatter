@@ -28,10 +28,9 @@ socket.on("connect", () => {
       window.printMessage = function(message, socketSenderId) {
             const messagebox = document.querySelector("#messages");
             if (socketSenderId == socket.id) {
-                  messagebox.innerHTML += "<div style='float: right;'>" + message + "</div><br>";
+                  messagebox.innerHTML += "<div style='overflow: auto;'><small style='float: right;'>" + socketSenderId + "</small><br><div style='float: right;'>" + message + "</div></div>";
             } else {
-                  messagebox.innerHTML += "<div>" + message + "</div><br>";
+                  messagebox.innerHTML += "<div><small>" + socketSenderId + "</small><br><div>" + message + "</div></div>";
             }
-            // console.log("socket.id: " + socket.id);
       }
 })
