@@ -2,6 +2,7 @@ import { io } from "socket.io-client";
 
 const socket = io("http://localhost:3000");
 const inputField = document.getElementById("inputSend");
+const inputFieldRoom = document.getElementById("room");
 
 inputField.addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
@@ -10,13 +11,24 @@ inputField.addEventListener("keyup", function(event) {
       }
 });
 
+
 socket.on("connect", () => {
       console.log("This socket id is: " + socket.id)
 
+      inputFieldRoom.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                  event.preventDefault();
+                  socket.emit("joinRoom", inputFieldRoom.value);
+                  document.querySelector("#roomsJoined").innerHTML += "<small>" + inputFieldRoom.value + " </small>";
+            }
+      });
+
       window.sendMessage = function(event) {
             var message = document.querySelector("#inputSend").value;
+            var room = document.querySelector("#room").value;
             if (message != "") {
-                  socket.emit("sendMessage", (message));
+                  console.log("SendMessage with message: " + message + "in room: " + room);
+                  socket.emit("sendMessage", message, room);
                   document.querySelector("#inputSend").value = "";
             }
       } 

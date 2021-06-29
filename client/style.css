@@ -53,11 +53,20 @@ input:focus {
 
 #roomContainer > * {
     display: block;
+    position: relative;
 }
 
 #room {
     width: 50%;
     min-width: 200px;
+}
+
+#roomsJoined {
+    height: 10px;
+}
+
+#roomsJoined small {
+    color: white;
 }
 
 #chatDiv {
@@ -105,8 +114,6 @@ input:focus {
     margin: 5px 0;
 }
 
-
-
 #messages > div > div {
     border-radius: 500px;
     background: var(--gradient);
@@ -115,3 +122,5 @@ input:focus {
     color: white;
     padding: 10px;
 }
+
+
