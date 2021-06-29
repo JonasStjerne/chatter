@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script type="module" src="./script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="contentDiv">
+            <h1>chatter</h1>
+            <div id="roomContainer">
+                <label for="room">Room</label> 
+                <input id="room" type="text">
+            </div>
+            <div id="chatDiv">
+                <div id="messages">
+                </div>
+                <div id="inputContainer">
+                    <div id="iconPlacer">
+                        <input type="text" id="inputSend">
+                        <img onclick="sendMessage()" src="./send_icon.png" id="sendIcon" width="16px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
